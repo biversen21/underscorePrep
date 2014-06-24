@@ -1,11 +1,11 @@
-function each(list, iterator){
+function each(list, iterator, context){
 	for (i=0; i<list.length; i++) {
 		iterator(list[i]);
 		console.log(list[i]);
 	}
 }
 
-function map(list, iterator){
+function map(list, iterator, context){
 	finalList = [];
 	for (i=0; i<list.length; i++) {
 		finalList.push(iterator(list[i]));
@@ -13,15 +13,15 @@ function map(list, iterator){
 	return finalList;
 }
 
-function reduce(list, iterator, memo) {
+function reduce(list, iterator, memo, context) {
 	
 }
 
-function reduceRight(list, iterator, memo) {
+function reduceRight(list, iterator, memo, context) {
 	
 }
 
-function find(list, predicate) {
+function find(list, predicate, context) {
 	for (i=0; i<list.length; i++) {
 		if (predicate(list[i])) {
 			return list[i];
@@ -29,7 +29,7 @@ function find(list, predicate) {
 	}
 }
 
-function filter(list, predicate) {
+function filter(list, predicate, context) {
 	finalList = [];
 	for (i=0; i<list.length; i++) {
 		if (predicate(list[i])) {
@@ -47,7 +47,7 @@ function findWhere(list, properties) {
 	
 }
 
-function reject(list, predicate) {
+function reject(list, predicate, context) {
 	finalList = [];
 	for (i=0; i<list.length; i++) {
 		if (!predicate(list[i])) {
@@ -57,11 +57,11 @@ function reject(list, predicate) {
 	return finalList;
 }
 
-function every(list, predicate) {
+function every(list, predicate, context) {
 	
 }
 
-function some(list, predicate) {
+function some(list, predicate, context) {
 	
 }
 
@@ -72,6 +72,55 @@ function contains(list, value) {
 		}
 	}
 	return false;
+}
+
+function invoke(list, methodName, arguments) {
+	
+}
+
+function pluck(list, propertyName) {
+	
+}
+
+function max(list, iterator, context) {
+	
+}
+
+function min(list, iterator, context) {
+	
+}
+
+function sortBy(list, iterator, context) {
+	
+}
+
+function groupBy(list, iterator, context) {
+	
+}
+
+function indexBy(list, iterator, context) {
+	
+}
+
+function countBy(list, iterator, context) {
+	
+}
+
+function shuffle(list) {
+	
+}
+
+function sample(list, n) {
+	
+}
+
+function toArray(list) {
+	
+}
+
+function size(list) {
+	console.log(list.length);
+	return list.length;
 }
 
 
@@ -92,3 +141,4 @@ var testPredicate = function(num) {
 //filter(testList2, testPredicate);
 //reject(testList2, testPredicate);
 //contains(testList2, testValue);
+//size(testList);
