@@ -13,6 +13,22 @@ function map(list, iterator){
 	return finalList;
 }
 
+function reduce(list, iterator, memo) {
+	
+}
+
+function reduceRight(list, iterator, memo) {
+	
+}
+
+function find(list, predicate) {
+	for (i=0; i<list.length; i++) {
+		if (predicate(list[i])) {
+			return list[i];
+		}
+	}
+}
+
 function filter(list, predicate) {
 	finalList = [];
 	for (i=0; i<list.length; i++) {
@@ -43,5 +59,6 @@ var testPredicate = function(num) {
 }
 //each(testList, alert);
 //map(testList2, testMulti);
+//find(testList2, testPredicate);
 //filter(testList2, testPredicate);
 //reject(testList2, testPredicate);
