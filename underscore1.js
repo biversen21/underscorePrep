@@ -5,5 +5,24 @@ function each(list, iterator){
 	}
 }
 
+function map(list){
+	
+}
+
+function filter(list, predicate) {
+	finalList = [];
+	for (i=0; i<list.length; i++) {
+		if (predicate(list[i])) {
+			finalList.push(list[i]);
+		}
+	}
+	return finalList;
+}
+
 var testList = ['hello', 2, true];
-each(testList, alert);
+var testList2 = [1,2,3,4];
+var testPredicate = function(num) {
+	return num % 2 == 0;
+}
+//each(testList, alert);
+filter()
