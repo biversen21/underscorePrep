@@ -23,6 +23,16 @@ function filter(list, predicate) {
 	return finalList;
 }
 
+function reject(list, predicate) {
+	finalList = [];
+	for (i=0; i<list.length; i++) {
+		if (!predicate(list[i])) {
+			finalList.push(list[i]);
+		}
+	}
+	return finalList;
+}
+
 var testList = ['hello', 2, true];
 var testList2 = [1,2,3,4];
 var testMulti = function(num) {
@@ -32,5 +42,6 @@ var testPredicate = function(num) {
 	return num % 2 == 0;
 }
 //each(testList, alert);
-map(testList2, testMulti);
+//map(testList2, testMulti);
 //filter(testList2, testPredicate);
+//reject(testList2, testPredicate);
