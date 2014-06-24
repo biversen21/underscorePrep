@@ -124,7 +124,7 @@ function size(list) {
 }
 
 
-//*************** Variable/Instance Setups ******************
+//*************** Variable Setups ******************
 
 var testList = ['hello', 2, true];
 var testList2 = [1,2,3,4];
@@ -135,6 +135,9 @@ var testMulti = function(num) {
 var testPredicate = function(num) {
 	return num % 2 == 0;
 }
+
+//*************** Instance Setups ******************
+
 //each(testList, alert);
 //map(testList2, testMulti);
 //find(testList2, testPredicate);
