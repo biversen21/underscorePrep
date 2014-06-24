@@ -5,8 +5,12 @@ function each(list, iterator){
 	}
 }
 
-function map(list){
-	
+function map(list, iterator){
+	finalList = [];
+	for (i=0; i<list.length; i++) {
+		finalList.push(iterator(list[i]));
+	}
+	return finalList;
 }
 
 function filter(list, predicate) {
@@ -21,8 +25,12 @@ function filter(list, predicate) {
 
 var testList = ['hello', 2, true];
 var testList2 = [1,2,3,4];
+var testMulti = function(num) {
+	return num * 2;
+}
 var testPredicate = function(num) {
 	return num % 2 == 0;
 }
 //each(testList, alert);
-filter()
+map(testList2, testMulti);
+//filter(testList2, testPredicate);
