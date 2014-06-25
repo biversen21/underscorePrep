@@ -1,5 +1,11 @@
 function first(array, n) {
-	
+	if (n) {
+		for (i=0; i<n; i++) {
+			return array.shift();
+		}
+	} else {
+		return array.shift();
+	}
 }
 
 function initial(array, n) {
@@ -37,3 +43,12 @@ function union(arrays) {
 function intersection(arrays) {
 	
 }
+
+//******************* Variable Setup ***********************
+
+var testArray = [1,2,3,4,5]
+
+//******************* Instance Setup ***********************
+
+first(testArray);
+first(testArray, 4);
