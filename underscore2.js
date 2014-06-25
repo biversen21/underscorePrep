@@ -9,11 +9,24 @@ function first(array, n) {
 }
 
 function initial(array, n) {
-	
+	if (n) {
+		for (i=0; i<n; i++) {
+			array.pop()
+		}
+	} else {
+	array.pop();
+	}
+	return array;
 }
 
 function last(array, n) {
-	
+	if (n) {
+		for (i=0; i<n; i++) {
+			return array.pop();
+		}
+	} else {
+		return array.pop();
+	}
 }
 
 function rest(array, index) {
@@ -50,5 +63,5 @@ var testArray = [1,2,3,4,5]
 
 //******************* Instance Setup ***********************
 
-first(testArray);
-first(testArray, 4);
+//first(testArray, 4);
+initial(testArray, 3);
