@@ -57,6 +57,38 @@ function intersection(arrays) {
 	
 }
 
+function difference(array, others) {
+	
+}
+
+function uniq(array, isSorted, iterator) {
+	
+}
+
+function zip(arrays) {
+	
+}
+
+function object(list, values) {
+	
+}
+
+function indexOf(array, value, isSorted) {
+	
+}
+
+function lastIndexOf(array, value, fromIndex) {
+	
+}
+
+function sortedIndex(list, value, iterator, context) {
+	
+}
+
+function range(start, stop, step) {
+	
+}
+
 //******************* Variable Setup ***********************
 
 var testArray = [1,2,3,4,5]
