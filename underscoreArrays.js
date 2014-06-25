@@ -30,7 +30,14 @@ function last(array, n) {
 }
 
 function rest(array, index) {
-	
+	if (index) {
+		console.log(array.slice(index));
+		return array.slice(index);
+	} else {
+		array.shift();
+		console.log(array);
+		return array;
+	}
 }
 
 function compact(array) {
@@ -97,3 +104,4 @@ var testArray = [1,2,3,4,5];
 
 //first(testArray, 4);
 //initial(testArray, 3);
+//rest(testArray, 3);
