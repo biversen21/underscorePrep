@@ -91,9 +91,9 @@ function range(start, stop, step) {
 
 //******************* Variable Setup ***********************
 
-var testArray = [1,2,3,4,5]
+var testArray = [1,2,3,4,5];
 
 //******************* Instance Setup ***********************
 
 //first(testArray, 4);
-initial(testArray, 3);
+//initial(testArray, 3);

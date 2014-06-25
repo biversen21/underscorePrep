@@ -1,4 +1,4 @@
-function bind(function, object, arguments) {
+function bind(functionParam, object, arguments) {
 	
 }
 
@@ -6,35 +6,35 @@ function bindAll(object, methodNames) {
 	
 }
 
-function partial(function, arguments) {
+function partial(functionParam, arguments) {
 	
 }
 
-function memoize(function, hashFunction) {
+function memoize(functionParam, hashFunction) {
 	
 }
 
-function delay(function, wait, arguments) {
+function delay(functionParam, wait, arguments) {
 	
 }
 
-function defer(function, arguments) {
+function defer(functionParam, arguments) {
 	
 }
 
-function throttle(function, wait, options) {
+function throttle(functionParam, wait, options) {
 	
 }
 
-function debounce(function, wait, immediate) {
+function debounce(functionParam, wait, immediate) {
 	
 }
 
-function once(function) {
+function once(functionParam) {
 	
 }
 
-function after(count, function) {
+function after(count, functionParam) {
 	
 }
 
@@ -42,11 +42,11 @@ function now() {
 	
 }
 
-function wrap(function, wrapper) {
+function wrap(functionParam, wrapper) {
 	
 }
 
-function compose(functions) {
+function compose(functionParam) {
 	
 }
 
