@@ -14,7 +14,10 @@ function map(list, iterator, context){
 }
 
 function reduce(list, iterator, memo, context) {
-	
+	for(i=0; i<list.length; i++) {
+		memo = iterator(memo, list[i]);
+	}
+	return memo;
 }
 
 function reduceRight(list, iterator, memo, context) {
@@ -140,6 +143,7 @@ var testPredicate = function(num) {
 
 //each(testList, alert);
 //map(testList2, testMulti);
+//reduce([1,2,3], function(memo, num){return memo + num;}, 0);
 //find(testList2, testPredicate);
 //filter(testList2, testPredicate);
 //reject(testList2, testPredicate);
