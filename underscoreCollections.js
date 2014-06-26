@@ -66,7 +66,26 @@ function where(list, properties) {
 }
 
 function findWhere(list, properties) {
-	
+	var finalArray = [];
+	var isValid;
+	for (i=0; i<list.length; i++) {
+		for (var keyA in list[i]) {
+			isValid = false;
+			for (var keyB in properties) {
+				if ((keyA === keyB) && (list[i][keyA] === properties[keyB])) {
+					isValid = true;
+				} else {
+					if ((keyA === keyB) && (list[i][keyA] !== properties[keyB])) {
+						isValid = false;
+					}
+				}
+			}
+		}
+		if (isValid) {
+			console.log(list[i]);
+			return list[i];
+		}
+	}
 }
 
 function reject(list, predicate, context) {
@@ -167,7 +186,8 @@ var listOfPlays = [{title: 'Cymbeline', author: 'Shakespeare', year: 1611}, {tit
 //reduce([1,2,3], function(memo, num){return memo + num;}, 0);
 //find(testList2, testPredicate);
 //filter(testList2, testPredicate);
-//where(listOfPlays, {author: 'Shakespeare', year: 1611})
+//where(listOfPlays, {author: 'Shakespeare', year: 1611});
+//findWhere(listOfPlays, {author: 'Shakespeare', year: 1611});
 //reject(testList2, testPredicate);
 //contains(testList2, testValue);
 //size(testList);
