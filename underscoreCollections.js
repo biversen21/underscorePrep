@@ -52,9 +52,7 @@ function where(list, properties) {
 				if ((keyA === keyB) && (list[i][keyA] === properties[keyB])) {
 					isValid = true;
 				} else {
-					if ((keyA === keyB) && (list[i][keyA] !== properties[keyB])) {
-						isValid = false;
-					}
+					isValid = false;
 				}
 			}
 		}
@@ -99,11 +97,23 @@ function reject(list, predicate, context) {
 }
 
 function every(list, predicate, context) {
-	
+	for(i=0; i<list.length; i++) {
+		if (!predicate(list[i])) {
+			return false;
+		} 
+	}
+	return true;
 }
 
 function some(list, predicate, context) {
-	
+	for(i=0; i<list.length; i++) {
+		if (predicate(list[i])) {
+			console.log(true);
+			return true;
+		} 
+	}
+	console.log(false);
+	return false;
 }
 
 function contains(list, value) {
@@ -169,6 +179,7 @@ function size(list) {
 
 var testList = ['hello', 2, true];
 var testList2 = [1,2,3,4];
+var testList3 = [2,4,6];
 var testValue = 5;
 var testMulti = function(num) {
 	return num * 2;
@@ -189,5 +200,7 @@ var listOfPlays = [{title: 'Cymbeline', author: 'Shakespeare', year: 1611}, {tit
 //where(listOfPlays, {author: 'Shakespeare', year: 1611});
 //findWhere(listOfPlays, {author: 'Shakespeare', year: 1611});
 //reject(testList2, testPredicate);
+//every(testList2, testPredicate);
+//some(testValue, testPredicate);
 //contains(testList2, testValue);
 //size(testList);
