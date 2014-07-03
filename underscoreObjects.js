@@ -1,5 +1,9 @@
 function keys(object) {
-	
+	var newArr = [];
+	for (var key in object) {
+		newArr.push(key);
+	}
+	console.log(newArr);
 }
 
 function values(object) {
@@ -117,3 +121,11 @@ function isNull(object) {
 function isUndefined(value) {
 	
 }
+
+// ************* Variable Declarations **************
+
+var testObject = {one: 1, two: 2, three: 3};
+
+// ************* Instances **************************
+
+keys(testObject);

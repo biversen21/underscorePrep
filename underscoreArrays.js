@@ -73,7 +73,7 @@ function partition(array, predicate) {
 }
 
 function union(arrays) {
-	
+
 }
 
 function intersection(arrays) {
@@ -128,4 +128,5 @@ function isOdd(test) {
 //initial(testArray, 3);
 //rest(testArray, 3);
 //compact(testArray2);
+without(testArray, 1, 2);
 //partition(testArray, isOdd);
