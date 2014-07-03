@@ -41,7 +41,14 @@ function rest(array, index) {
 }
 
 function compact(array) {
-	
+	var newArr = [];
+	for (i=0; i<array.length; i++) {
+		if (array[i]) {
+			console.log(array[i]);
+			newArr.push(array[i]);
+		} 
+	}
+	return newArr;
 }
 
 function flatten(array, shallow) {
@@ -99,9 +106,11 @@ function range(start, stop, step) {
 //******************* Variable Setup ***********************
 
 var testArray = [1,2,3,4,5];
+var testArray2 = [0, 1, false, 2, '', 3];
 
 //******************* Instance Setup ***********************
 
 //first(testArray, 4);
 //initial(testArray, 3);
 //rest(testArray, 3);
+//compact(testArray2);

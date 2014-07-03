@@ -126,7 +126,7 @@ function contains(list, value) {
 }
 
 function invoke(list, methodName, arguments) {
-	
+
 }
 
 function pluck(list, propertyName) {
@@ -203,4 +203,5 @@ var listOfPlays = [{title: 'Cymbeline', author: 'Shakespeare', year: 1611}, {tit
 //every(testList2, testPredicate);
 //some(testValue, testPredicate);
 //contains(testList2, testValue);
+invoke(testList2, 'sort')
 //size(testList);
