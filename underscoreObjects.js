@@ -3,11 +3,16 @@ function keys(object) {
 	for (var key in object) {
 		newArr.push(key);
 	}
-	console.log(newArr);
+	return newArr;
 }
 
 function values(object) {
-	
+	var newArr = [];
+	for (var key in object) {
+		newArr.push(object[key]);
+	}
+	console.log(newArr);
+	return newArr;
 }
 
 function pairs(object) {
@@ -128,4 +133,5 @@ var testObject = {one: 1, two: 2, three: 3};
 
 // ************* Instances **************************
 
-keys(testObject);
+//keys(testObject);
+values(testObject);
