@@ -56,11 +56,20 @@ function flatten(array, shallow) {
 }
 
 function without(array, values) {
-	
+
 }
 
 function partition(array, predicate) {
-	
+	var part1 = [];
+	var part2 = [];
+	for (i=0; i<array.length; i++) {
+		if (predicate(array[i])) {
+			part1.push(array[i]);
+		} else {
+			part2.push(array[i]);
+		}
+	}
+	return (part1, part2);
 }
 
 function union(arrays) {
@@ -107,6 +116,11 @@ function range(start, stop, step) {
 
 var testArray = [1,2,3,4,5];
 var testArray2 = [0, 1, false, 2, '', 3];
+function isOdd(test) {
+	if (test % 2 !=0) {
+		return true;
+	}
+}
 
 //******************* Instance Setup ***********************
 
@@ -114,3 +128,4 @@ var testArray2 = [0, 1, false, 2, '', 3];
 //initial(testArray, 3);
 //rest(testArray, 3);
 //compact(testArray2);
+//partition(testArray, isOdd);
