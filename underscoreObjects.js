@@ -11,12 +11,18 @@ function values(object) {
 	for (var key in object) {
 		newArr.push(object[key]);
 	}
-	console.log(newArr);
 	return newArr;
 }
 
 function pairs(object) {
-	
+	var newArr = [];
+	for (var key in object) {
+		var secondArr = [];
+		secondArr.push(key);
+		secondArr.push(object[key]);
+		newArr.push(secondArr);
+	}
+	return newArr;
 }
 
 function invert(object) {
@@ -134,4 +140,5 @@ var testObject = {one: 1, two: 2, three: 3};
 // ************* Instances **************************
 
 //keys(testObject);
-values(testObject);
+//values(testObject);
+//pairs(testObject);
