@@ -58,7 +58,12 @@ function tap(object, interceptor) {
 }
 
 function has(object, key) {
-	
+	for (var keyb in object) {
+		if (key === keyb) {
+			return true;
+		}
+	}
+	return false;
 }
 
 function property(key) {
@@ -136,9 +141,11 @@ function isUndefined(value) {
 // ************* Variable Declarations **************
 
 var testObject = {one: 1, two: 2, three: 3};
+var testObject2 = {a: 1, b: 2, c: 3};
 
 // ************* Instances **************************
 
 //keys(testObject);
 //values(testObject);
 //pairs(testObject);
+//has(testObject2, "f");
