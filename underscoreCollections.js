@@ -130,7 +130,11 @@ function invoke(list, methodName, arguments) {
 }
 
 function pluck(list, propertyName) {
-	
+	var newArr = [];
+	for (i=0; i<list.length; i++) {
+		newArr.push(list[i][propertyName]);
+	}
+	return newArr;
 }
 
 function max(list, iterator, context) {
@@ -203,5 +207,6 @@ var listOfPlays = [{title: 'Cymbeline', author: 'Shakespeare', year: 1611}, {tit
 //every(testList2, testPredicate);
 //some(testValue, testPredicate);
 //contains(testList2, testValue);
-invoke(testList2, 'sort')
+//invoke(testList2, 'sort');
+//pluck(listOfPlays, 'author');
 //size(testList);
