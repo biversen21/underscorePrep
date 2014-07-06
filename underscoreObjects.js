@@ -26,7 +26,13 @@ function pairs(object) {
 }
 
 function invert(object) {
-	
+	var newObject = {};
+	for (var key in object) {
+		var newVal = key;
+		var newKey = object[key];
+		newObject[newKey] = newVal;
+	}
+	return newObject;
 }
 
 function functions(object) {
@@ -142,10 +148,12 @@ function isUndefined(value) {
 
 var testObject = {one: 1, two: 2, three: 3};
 var testObject2 = {a: 1, b: 2, c: 3};
+var testObject3 = {Moe: "Moses", Larry: "Louis", Curly: "Jerome"};
 
 // ************* Instances **************************
 
 //keys(testObject);
 //values(testObject);
 //pairs(testObject);
+//invert(testObject3);
 //has(testObject2, "f");
