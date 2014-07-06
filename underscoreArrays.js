@@ -56,7 +56,19 @@ function flatten(array, shallow) {
 }
 
 function without(array, values) {
-
+	var newArr = [];
+	for (i = 0; i<array.length; i++) {
+		var valid = true;
+		for (j = 1; j<arguments.length; j++) {
+			if (array[i] === arguments[j]) {
+				valid = false;
+			}
+		}
+		if (valid) {
+			newArr.push(array[i]);
+		}
+	}
+	return newArr;
 }
 
 function partition(array, predicate) {
@@ -128,5 +140,5 @@ function isOdd(test) {
 //initial(testArray, 3);
 //rest(testArray, 3);
 //compact(testArray2);
-without(testArray, 1, 2);
+//without(testArray, 1, 2, 3);
 //partition(testArray, isOdd);
