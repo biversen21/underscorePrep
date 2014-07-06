@@ -21,7 +21,10 @@ function reduce(list, iterator, memo, context) {
 }
 
 function reduceRight(list, iterator, memo, context) {
-	
+	for (i=(list.length -1); i >= 0; i--) {
+		memo = iterator(memo, list[i]);
+	}
+	return memo;
 }
 
 function find(list, predicate, context) {
@@ -184,6 +187,7 @@ function size(list) {
 var testList = ['hello', 2, true];
 var testList2 = [1,2,3,4];
 var testList3 = [2,4,6];
+var testList4 = [[0,1], [2,3], [4,5]];
 var testValue = 5;
 var testMulti = function(num) {
 	return num * 2;
@@ -199,6 +203,7 @@ var listOfPlays = [{title: 'Cymbeline', author: 'Shakespeare', year: 1611}, {tit
 //each(testList, alert);
 //map(testList2, testMulti);
 //reduce([1,2,3], function(memo, num){return memo + num;}, 0);
+//reduceRight(testList4, function(memo, num){return  memo.concat(num);}, []);
 //find(testList2, testPredicate);
 //filter(testList2, testPredicate);
 //where(listOfPlays, {author: 'Shakespeare', year: 1611});
