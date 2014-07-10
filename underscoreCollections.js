@@ -169,7 +169,19 @@ function shuffle(list) {
 }
 
 function sample(list, n) {
-	
+	var index;
+	var listArr = [];
+	if (n) {
+		for (i = 0; i < n; i++) {
+			index = Math.floor(Math.random() * n) + 1;
+			listArr.push(list[index]);
+			console.log(listArr);
+		}
+	} else {
+		index = Math.floor(Math.random() * n) + 1; 
+		console.log(index);
+		return list;
+	}
 }
 
 function toArray(list) {
@@ -214,4 +226,5 @@ var listOfPlays = [{title: 'Cymbeline', author: 'Shakespeare', year: 1611}, {tit
 //contains(testList2, testValue);
 //invoke(testList2, 'sort');
 //pluck(listOfPlays, 'author');
+sample(testList2, 3);
 //size(testList);
